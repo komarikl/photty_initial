@@ -2,3 +2,36 @@ extends ../_template
 
 block variables
   - var title = 'Photty'
+
+block content
+  main.main
+    .main__left
+    .main__right
+      .about
+        span.about__slogan
+        h1.about__title Впечатляющие обои на каждый день.
+        p.about_desc
+          |Мы каждый день ищем новые красивые обои для твоего смартфона,
+          |чтобы каждый твой день был насыщенным и полон приключений!
+          |Посети новые страны, покори недосягаемые вершины и узнай много интересного используя
+          |всего одно приложение “Photty”.
+        button.download-button(type="button")
+          i.fa.fa-arrow-down(aria-hidden="true")
+          span.download-button__text Загрузить бесплатно
+        -
+          var items=[{href:'https://www.facebook.com/', name: 'facebook'},
+          {href:'https://www.twitter.com/', name: 'twitter'},
+          {href:'#', name:'globe'},
+          {href:'https://www.github.com/', name: 'github'}]
+
+        ul.socials
+          each item in items
+            li.social: a.social__link(href=item.href): i(class='fa fa-' + item.name)
+
+        .bullets
+          .bullet.bullet--active Bullet1
+          .bullet Bullet2
+          .bullet Bullet3
+          .bullet Bullet4
+
+
