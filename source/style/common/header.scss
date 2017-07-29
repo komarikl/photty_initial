@@ -1,0 +1,26 @@
+.header{
+  display: flex;
+  flex: none;
+  align-items: center;
+  position: relative;
+  height: 75px;
+  overflow: hidden;
+  padding: 0 15%;
+  &__logo{
+    display: inline-block;
+    flex: 1;
+    font-family: "Ralington";
+    font-size: 3em;
+    color: $aqua;
+  }
+  &__nav-list{
+    display: flex;
+    flex-wrap: wrap;
+    .nav-list__item{
+      padding-left: 3em;
+    }
+  }
+  @include phones{
+    padding: 0 5%;
+  }
+}

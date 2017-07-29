@@ -1,0 +1,54 @@
+*{
+  box-sizing: border-box;
+  //transition: all 0.4s ease-in-out;
+}
+html,body{
+  height: 100%;
+  font-size: 2vmin;
+  position: relative;
+  font-family: 'Tahoma Regular', Tahoma, sans-serif;
+  color: $text;
+  background: url('../img/back.png');
+  @include phones{
+    min-height: 480px;
+    min-width: 320px;
+    font-size: 2vh;
+    line-height: 2em;
+  }
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  margin:0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.back-rectangle{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 50%;
+  overflow: hidden;
+  .rectangle{
+    fill: $aqua;
+    fill-opacity: 0.8;
+  }
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,13 @@
+-
+    var items=[{href:'#', name: 'О проекте'},
+    {href:'https://play.google.com/', name: 'Google Play'},
+    {href:'https://www.apple.com/ru/ios/app-store/', name:'App Store'},
+    {href:'#', name: 'Авторы'}]
+
+header.header
+    span.header__logo Photty
+    nav.header__nav-list
+        each item in items
+            a.nav-list__item(href= item.href)  #{item.name}
+
+

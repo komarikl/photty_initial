@@ -1,0 +1,44 @@
+extends ../_template
+
+block content
+  main.main
+    .main__left
+      .hand-wrapper
+        img.hand-left(src='./assets/img/hand.png')
+        img.finger(src='./assets/img/finger.png')
+        img.hand-right(src='./assets/img/hand2.png')
+        .slider
+          img.slider-pic.slider-pic--active(src='https://source.unsplash.com/category/nature/270x480')
+          img.slider-pic(src='https://source.unsplash.com/270x480/?water,fire')
+    .main__right
+      .about
+        .about__slogan around the world
+        .about__title Впечатляющие обои  на каждый день.
+        p.about__desc
+          | Мы каждый день ищем новые красивые обои для твоего смартфона,
+          | чтобы каждый твой день был насыщенным и полон приключений!
+          | Посети новые страны, покори недосягаемые вершины и узнай много интересного,
+          | используя всего одно приложение “
+          span.photty Photty
+          |”.
+        button.download-button
+          i(aria-hidden='true').fa.fa-arrow-down
+          span.download-button__text  Загрузить бесплатно
+        -
+          var items=[{href:'https://www.facebook.com/', name: 'facebook'},
+          {href:'https://www.twitter.com/', name: 'twitter'},
+          {href:'#', name:'globe'},
+          {href:'https://www.github.com/', name: 'github'}]
+
+        ul.socials
+          each item in items
+            li.social: a.social__link(href=item.href): i(class='fa fa-' + item.name)
+        //- var n = 0;
+        //ul.bullets
+        //  while n < 4
+        //    li.bullet= 'Bullet '+ n++
+        ul.bullets
+          li.bullet.bullet--active Bullet1
+          li.bullet Bullet2
+          li.bullet Bullet3
+          li.bullet Bullet4
